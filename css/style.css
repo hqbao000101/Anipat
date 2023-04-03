@@ -1,0 +1,650 @@
+/* ! padding for whole website is 100px left and right */
+
+/* TODO: GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.clear {
+  clear: both;
+}
+
+/* TODO: HEADER */
+header {
+  padding: 20px 100px;
+  background-color: black;
+}
+
+header .header__left {
+  float: left;
+  width: 60%;
+  color: white;
+}
+
+header .header__right {
+  float: left;
+  width: 40%;
+  text-align: right;
+}
+
+header .header__left a {
+  color: white;
+  margin-right: 5%;
+}
+
+header .header__left a:hover {
+  color: #f43100;
+}
+
+header .header__right a {
+  color: white;
+  margin-left: 4%;
+}
+
+/* TODO: NAVBAR */
+nav {
+  padding: 40px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+nav .nav__logo {
+  float: left;
+  width: 30%;
+}
+
+nav .nav__menu {
+  float: left;
+  width: 70%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .nav__menu li {
+  margin-left: 5%;
+  font-weight: bolder;
+}
+
+nav .nav__menu li a:hover {
+  color: #f43100;
+}
+
+/* TODO: CAROUSEL */
+.carousel {
+  padding: 20px 100px;
+  margin-bottom: 100px;
+  background-image: url(../img/banner.png);
+  height: 900px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.carousel .carousel__title {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 35%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.carousel .carousel__title h1 {
+  font-size: 7rem;
+}
+
+.carousel .carousel__title p {
+  line-height: 2rem;
+  margin-top: 1.2rem;
+}
+
+.carousel .carousel__title a button {
+  margin-top: 60px;
+  border: none;
+  border-radius: 50px;
+  padding: 2rem 3.5rem;
+  color: #f43100;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.carousel .carousel__title a button:hover {
+  background-color: black;
+  box-shadow: 2px 2px 5px white;
+  color: white;
+}
+
+.carousel img {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  width: 70%;
+}
+
+/* TODO: SERVICE */
+.service {
+  padding: 90px 90px 0;
+  text-align: center;
+}
+
+.service .service__title h2 {
+  font-size: 50px;
+}
+
+.service .service__title p {
+  line-height: 55px;
+  color: #808080;
+}
+
+.service .service__container {
+  margin: 100px 0 50px;
+}
+
+.service .service__container .service-card {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.service .service__container .service-card .service-item {
+  border: 1px solid #fbd2cf;
+  padding: 100px 20px;
+}
+
+.service .service__container .service-card .service-item div {
+  background-image: url(../img/service_icon_bg_1.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+.service .service__container .service-card .service-item h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 50px 0 30px;
+}
+
+.service .service__container .service-card .service-item p {
+  line-height: 30px;
+  color: #808080;
+}
+
+.service .service__container .service-card .service-item:hover {
+  box-shadow: 5px 5px 15px black;
+  cursor: pointer;
+}
+
+/* TODO: CARE */
+.care {
+  padding: 0 100px 100px;
+}
+
+.care .care__area1 .care-cat,
+.care .care-content {
+  float: left;
+  width: 50%;
+}
+
+.care .care__area2 .care-number {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.care .care__area2 .care-number .care-container {
+  float: left;
+  width: 40%;
+}
+
+.care .care__area1 .care-cat img {
+  width: 80%;
+}
+
+.care .care-content {
+  padding: 150px 200px 100px 50px;
+}
+
+.care .care-content h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.care .care-content strong {
+  font-size: 50px;
+}
+
+.care .care-content p {
+  color: #808080;
+  margin: 40px 0 50px;
+  line-height: 30px;
+}
+
+.care .care-content a button {
+  border: none;
+  color: white;
+  background-color: #f43100;
+  padding: 20px 60px;
+  border-radius: 50px;
+}
+
+.care .care-content a button:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px 5px #f43100;
+}
+
+.care .care__area2 .care-number .care-container {
+  padding: 15px;
+}
+
+.care .care__area2 .care-number .care-container:first-child {
+  padding-top: 170px;
+}
+
+.care .care__area2 .care-number .care-container .care-card {
+  border: 1px solid #ededed;
+  padding: 50px 60px;
+  border-radius: 20px;
+}
+
+.care .care__area2 .care-number .care-container .care-card:hover {
+  box-shadow: 5px 5px 15px black;
+  cursor: pointer;
+}
+
+.care .care__area2 .care-number .care-container .care-card h2 {
+  font-size: 60px;
+  margin-top: 25px;
+}
+
+.care .care__area2 .care-number .care-container .care-card span {
+  color: #808080;
+  font-size: 20px;
+}
+
+/* TODO: TEAM */
+.team {
+  padding: 100px;
+  text-align: center;
+}
+
+.team h1 {
+  font-size: 50px;
+}
+
+.team p {
+  color: #808080;
+  line-height: 30px;
+  margin: 20px 0 100px;
+}
+
+.team .team__container {
+  width: 80%;
+  margin: auto;
+}
+
+.team .team__container .team-item {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.team .team__container .team-item .team-card img {
+  width: 90%;
+}
+
+.team .team__container .team-item .team-info {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 30px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.team .team__container .team-item:hover .team-info {
+  box-shadow: 2px 2px 5px #f43100;
+}
+
+.team .team__container .team-item .team-info h4 {
+  color: #808080;
+}
+
+/* TODO: CONTACT */
+.contact {
+  padding: 150px 20px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: white;
+  background-image: url(../img/contact_bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact h1 {
+  font-size: 50px;
+}
+
+.contact p {
+  line-height: 35px;
+  margin: 50px 0;
+}
+
+.contact a button {
+  color: #f43100;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px 50px;
+}
+
+.contact a button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 1px 1px 3px white;
+  cursor: pointer;
+}
+
+.contact span {
+  margin: 0 2%;
+}
+
+.contact a {
+  color: white;
+}
+
+.contact a:hover {
+  color: black;
+}
+
+/* TODO: FOOTER */
+footer {
+  background-color: #f8f8f8;
+  padding: 100px 100px 0;
+  color: #858585;
+}
+
+footer .footer__content .footer-appendix {
+  float: left;
+  width: 23.33%;
+}
+
+footer .footer__content .footer-appendix:last-child {
+  width: 30%;
+}
+
+footer .footer__content .footer-appendix h2 {
+  margin-bottom: 50px;
+  color: black;
+}
+
+footer .footer__content .footer-appendix a {
+  color: #858585;
+  margin-right: 20px;
+}
+
+footer .footer__content .footer-appendix a:hover {
+  color: #f43100;
+}
+
+footer .footer__content .footer-appendix > div {
+  margin-bottom: 30px;
+}
+
+footer .footer__content .footer-appendix ul li {
+  margin-bottom: 30px;
+}
+
+footer .footer__content .footer-appendix img {
+  margin-bottom: 40px;
+}
+
+footer .footer__content .footer-appendix p {
+  margin-bottom: 30px;
+}
+
+footer hr {
+  margin-top: 150px;
+  border: 1px solid #e7e7e7;
+}
+
+footer > p {
+  padding: 30px 0;
+}
+
+/* ? ICON HOVER------------------------------------ */
+a:hover .fab {
+  text-shadow: 1px 1px 3px white;
+}
+
+a:hover .fa-facebook-f {
+  color: #1e90ff;
+}
+
+a:hover .fa-pinterest-p {
+  color: #ff6b81;
+}
+
+a:hover .fa-google-plus-g {
+  color: #eccc68;
+}
+
+a:hover .fa-linkedin-in {
+  color: #0652dd;
+}
+/* ? ICON------------------------------------------- */
+
+/* TODO: RESPONSIVE */
+/* todo: 1280px */
+@media (max-width: 1280px) {
+  /* CAROUSEL */
+  .carousel .carousel__title {
+    width: 70%;
+    align-items: center;
+    margin: auto;
+  }
+
+  .carousel .carousel__title h1 {
+    font-size: 5rem;
+  }
+
+  .carousel .carousel__title p {
+    text-align: center;
+  }
+
+  .carousel img {
+    width: 40%;
+    bottom: -50px;
+  }
+
+  /* CARE */
+  .care .care__area1 .care-cat,
+  .care .care-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .care .care__area2 .care-number {
+    float: right;
+    width: 100%;
+  }
+
+  .care .care__area2 .care-number .care-container {
+    width: 50%;
+  }
+
+  .care .care__area1 .care-cat img {
+    width: 100%;
+  }
+
+  .care .care-content {
+    padding: 50px;
+  }
+
+  /* TEAM */
+  .team .team__container .team-item {
+    width: 100%;
+  }
+
+  .team .team__container .team-item .team-card img {
+    width: 50%;
+  }
+
+  /* FOOTER */
+  footer .footer__content .footer-appendix {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+}
+
+/* todo: 992px */
+@media (max-width: 992px) {
+  /* SERVICE */
+  .service .service__container .service-card {
+    width: 100%;
+  }
+
+  /* TEAM */
+  .team .team__container .team-item .team-card img {
+    width: 100%;
+  }
+}
+
+/* todo: 768px */
+@media (max-width: 768px) {
+  /* GLOBAL */
+  header,
+  nav,
+  .carousel,
+  .care {
+    padding: 20px;
+  }
+
+  /* CAROUSEL */
+  .carousel img {
+    width: 50%;
+  }
+
+  /* SERVICE */
+  .service {
+    padding: 90px 20px;
+  }
+
+  /* TEAM */
+  .team {
+    padding: 100px 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 100px 20px 0;
+  }
+}
+
+/* todo: 576px */
+@media (max-width: 576px) {
+  /* GLOBAL */
+  html {
+    font-size: 15px;
+  }
+
+  /* HEADER */
+  header .header__left span {
+    display: block;
+  }
+
+  header .header__right {
+    margin-top: 10px;
+  }
+
+  /* NAVBAR */
+  nav .nav__logo,
+  nav .nav__menu {
+    width: 100%;
+  }
+
+  nav .nav__menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* CAROUSEL */
+  .carousel .carousel__title {
+    align-items: flex-start;
+  }
+
+  .carousel .carousel__title h1 {
+    font-size: 2.7rem;
+  }
+
+  .carousel .carousel__title p {
+    text-align: left;
+  }
+
+  .carousel .carousel__title a button {
+    font-size: 1rem;
+    padding: 2rem 2.5rem;
+  }
+
+  .carousel img {
+    width: 80%;
+  }
+
+  /* CARE */
+  .care .care__area2 .care-number .care-container {
+    width: 100%;
+  }
+
+  .care .care__area2 .care-number .care-container:first-child {
+    padding-top: 15px;
+  }
+
+  /* CONTACT */
+  .contact span {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* FOOTER */
+  footer .footer__content .footer-appendix {
+    width: 100%;
+  }
+
+  footer hr {
+    margin-top: 0;
+  }
+}
